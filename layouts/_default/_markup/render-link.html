@@ -1,0 +1,41 @@
+<a
+
+	{{ if strings.HasPrefix .Destination `/` }}
+
+		{{ $destination :=  (.Destination | strings.TrimPrefix `/`) }}
+		{{ $destination := printf "%s%s" site.Home.Permalink $destination }}
+		href = "{{ $destination | safeURL }}"
+
+	{{ else if strings.HasPrefix .Destination `mailto` }}
+
+		href = "mailto:{{ .Text }}"
+	
+	{{ else if or (strings.HasPrefix .Destination `#`) (strings.HasPrefix .Destination `http`) }}
+	
+		href = "{{ .Destination | safeURL }}"
+
+
+	{{ end }}
+
+	{{ with .Title}}
+		
+		title = "{{ . }}"
+	
+	{{ end }}
+
+	{{ if strings.HasPrefix .Destination "http" }}
+
+		target = "_blank"
+		rel = "nofollow noopener noreferrer"
+
+		{{ else if strings.HasPrefix .Destination "mailto" }}
+
+			onClick = "javascript:window.open('mailto:{{ .Text }}', 'mail'); event.preventDefault()"
+
+	{{ end }}>
+	
+	<span>
+		{{ .Text }}
+	</span>
+
+</a>
