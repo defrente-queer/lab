@@ -2,7 +2,7 @@
 title: DeFrente LAB
 ---
 
-Desde DeFrente consideramos de vital importancia para la lucha por nuestra comunidad la capacidad de imaginar nuevos horizontes a los que llegar y el camino que conduce a ellos.
+Desde [DeFrente](https://defrente.org/) consideramos de vital importancia para la lucha por nuestra comunidad la capacidad de imaginar nuevos horizontes a los que llegar y el camino que conduce a ellos.
 
 Es por eso que organizamos este **Laboratorio de Activista**, que pretende ser un foro para la reflexión y debate sobre las violencias que nos atraviesan y sobre como aunar los marcos teóricos que nos pueden llegar desde academia y nuestras vivencias personales en propuestas concretas que nos permitan mejorar nuestras condiciones materiales como personas queer.
 

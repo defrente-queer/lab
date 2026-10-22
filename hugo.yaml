@@ -1,0 +1,82 @@
+baseURL: https://defrente-queer.github.io/lab/
+locale: es-ES
+title: DeFrente LAB
+theme: hugo-PaperMod
+defaultContentLanguage: es
+copyright: "@ 2026 [DeFrente](https://defrente.org/)"
+mainSections:
+  - posts
+  - queerzine
+enableRobotsTXT: true
+capitalizeListTitles: false
+disableKinds:
+  - taxonomy
+taxonomies:
+  tag: tags
+permalinks:
+  blog: /:slugorcontentbasename/
+  tags: /blog/:slug
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+  highlight:
+    noClasses: false
+params:
+  title: DeFrente LAB
+  description: Laboratorio de Activista de DeFrente
+  dateFormat: 2006-01-02
+  defaultTheme: auto
+  ShowShareButtons: true
+  ShowReadingTime: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowToc: true
+  socialIcons: # optional
+    - name: "instagram"
+      url: "https://www.instagram.com/defrente.queer"
+    - name: "instagram"
+      url: "https://www.instagram.com/la.pecca"
+    - name: "facebook"
+      url: "https://www.facebook.com/asociaciondefrentelgtbi/"
+    - name: "youtube"
+      url: "https://www.youtube.com/@AsociacionDeFrente"
+  label:
+    icon: images/logo.png
+    iconHeight: 120
+  rightLogo:
+    image: images/memorias-lgtb-futuros-queer.png
+    alt: Memorias LGTB - Futuros Queer
+    height: 120
+  
+menu:
+  main:
+    - name: Inicio
+      pageRef: /
+      weight: 10
+    - name: Laboratorio
+      pageRef: /posts
+      weight: 20
+    - name: Queerzine
+      pageRef: /queerzine
+      weight: 30
+services:
+  rss:
+    limit: 42
+pagination:
+  pagerSize: 16
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+caches:
+  images:
+    dir: :cacheDir/images
